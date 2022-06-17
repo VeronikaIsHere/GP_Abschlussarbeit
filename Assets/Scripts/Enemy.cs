@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public bool _isFacingRight;
     private float _startPos;
     private float _endPos;
+    public GameObject HitCheck;
 
     public bool _moveRight = true;
 
@@ -58,4 +59,5 @@ public class Enemy : MonoBehaviour
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         _isFacingRight = transform.localScale.x > 0;
     }
+
 }
