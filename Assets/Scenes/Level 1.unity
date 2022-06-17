@@ -30947,6 +30947,10 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[3].Array.data[11].Y
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 2543033643622344827, guid: c81568c94c7f84a4d86f8bd82d04e21f, type: 3}
+      propertyPath: m_UseOneWay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2543033643622344828, guid: c81568c94c7f84a4d86f8bd82d04e21f, type: 3}
       propertyPath: m_Name
       value: Terrain
