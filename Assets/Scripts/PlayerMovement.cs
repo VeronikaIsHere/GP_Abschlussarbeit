@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask jumpableGround;
 
     [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource PowerUpSound;
+    [SerializeField] private AudioSource PowerDownSound;
     public GameObject PowerUp;
 
     // Start is called before the first frame update
@@ -59,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("PowerUp"))
         {
             Destroy(collision.gameObject);
+            PowerUpSound.Play();
             Debug.Log("Powerup taken");
             BeHigh();
 
@@ -73,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void NormalJump()
     {
+        PowerDownSound.Play();
         jumpForce = 14f;
         Debug.Log("Normal Jump");
     }
