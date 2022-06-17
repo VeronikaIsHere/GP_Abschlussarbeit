@@ -24,14 +24,14 @@ public class PlayerLife : MonoBehaviour
         {
 
             deathSound.Play();
-            Die();
+            Invoke("Die", 1);
 
         }
         if (collision.gameObject.CompareTag("enemy"))
         {
 
             deathSound.Play();
-            Die();
+            Invoke("Die", 1);
         }
     }
 
