@@ -7,6 +7,7 @@ public class PlayerLife : MonoBehaviour
 {
     // private Animator anim;
     private Rigidbody2D rb;
+    
     public GameObject player;
     [SerializeField] private AudioSource deathSound;
 
@@ -24,14 +25,14 @@ public class PlayerLife : MonoBehaviour
         {
 
             deathSound.Play();
-            Invoke("Die", 1);
+            Invoke("Die", 0.3f);
 
         }
         if (collision.gameObject.CompareTag("enemy"))
         {
 
             deathSound.Play();
-            Invoke("Die", 1);
+            Invoke("Die", 0.4f);
         }
     }
 
@@ -50,7 +51,7 @@ public class PlayerLife : MonoBehaviour
         player.SetActive(false);
 
         //Levelrestart after 1 second
-        Invoke("RestartLevel", 1);
+        Invoke("RestartLevel", 0.5f);
     }
 
     private void RestartLevel()
